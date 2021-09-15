@@ -1,37 +1,18 @@
-# baceCore
+# Helper
+[use MBCore\MCore\Libraries\Helper]
+1. getPlatform(Request $request) 获取当前的平台类型，依据：server('HTTP_USER_AGENT'))
+2. safeEncode($data) 安全base64_encode将可能会被浏览器破坏的符号替换成其他符号
+3. safeDecode($data) 安全解码 对应 safeEncode
+4. Encrypt($data, $key) 简单加密
+5. Decrypt($data,$key)  简单解密
 
-#### 介绍
-核心扩展包
+# 数据库 migrate 验证机制
+php artisan mbcore:updatedb
 
-#### 软件架构
-软件架构说明
+> 需要在 /config/database.php 中增加
+> 'mysql_test' => config("mbcore_mcore.mysql_test",[]), //增加测试数据库
 
-
-#### 安装教程
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 使用说明
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 参与贡献
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
-
-
-#### 特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+# 配置文件说明
+1. 使用mbcore_mcore.mysql_test的配置
+2. 加载.env的专有配置 _TEST
+3. 采用.env的正式服务器配置，并将数据库名修改成后缀为 _test 的数据库

@@ -1,12 +1,11 @@
 {
-    "name": "mbcore/core",
-    "description": "MBCore Core Packages",
+    "name": "jenson/core",
+    "description": "Jenson Core Packages",
     "type": "project",
     "license": "MIT",
     "authors": [
         {
-            "name": "MBCore Jiefan",
-            "email": "i@mbcore.com"
+            "name": "Jesson.Wang"
         }
     ],
     "minimum-stability": "dev",

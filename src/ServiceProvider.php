@@ -17,28 +17,26 @@ class ServiceProvider extends BaseServiceProvider{
 	public function boot()
 	{
 
-        // 模板机制中使用的量
-        Blade::directive('getImageUrl', function($picturerHash,$size='0,300') {
-            return "<?php echo $picturerHash?config('mbcore_mcore.storage_url').config('mbcore_mcore.storage_get_url_api').'/'.$picturerHash.'?size=$size&t=1&redirect=1':config('mbcore_mcore.storage_url').'/image/no_image.jpg'; ?>";
+        # 模板机制中使用的量
+        Blade::directive('getImageUrl', function($pictureHash,$size='0,300') {
+            return "<?php echo $pictureHash?config('mbcore_mcore.storage_url').config('mbcore_mcore.storage_get_url_api').'/'.$pictureHash.'?size=$size&t=1&redirect=1':config('mbcore_mcore.storage_url').'/image/no_image.jpg'; ?>";
         });
         // <img src="@getImageUrl(c8545f2a2efa97d9b561644d389bf4c02f9cd77c)">
 
-
-        // 【ok】【1】发布扩展包的配置文件
+        #【1】发布扩展包的配置文件
         $this->publishes([
             __DIR__.'/config/mbcore_mcore.php' => config_path('mbcore_mcore.php'),
         ], 'config');
 
-
-	    //主域名根目录
+	    # 主域名根目录
 		$request_scheme = \Request::server("REQUEST_SCHEME");
         $request_scheme = $request_scheme?$request_scheme:"http"; //如果丢失时默认http
 		$http_host = \Request::server('HTTP_HOST');
 		$baseurl = $request_scheme ."://".  $http_host;
 		
-	    //分组名获取
+	    # 分组名获取
         $app_name = "";
-        // 验证状态开启
+        # 验证状态开启
         if (config('mbcore_mcore.app_install_way') === 'group' && config('mbcore_mcore.app_name')!="" ) {
             $app_name = "/".trim(config('mbcore_mcore.app_name'),"/")."/";
         }
@@ -49,7 +47,7 @@ class ServiceProvider extends BaseServiceProvider{
         \URL::forceRootUrl($baseurl.$app_name);
 
 
-        // 【6】注册 Artisan 命令
+        # 【6】注册 Artisan 命令
         if ($this->app->runningInConsole()) {
             $this->commands([
 //               MBCoreCommand::class,
