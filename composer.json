@@ -1,0 +1,28 @@
+{
+    "name": "mbcore/core",
+    "description": "MBCore Core Packages",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "MBCore Jiefan",
+            "email": "i@mbcore.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "guzzlehttp/guzzle": "^6.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "MBCore\\MCore\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MBCore\\MCore\\ServiceProvider"
+            ]
+        }
+    }
+}
