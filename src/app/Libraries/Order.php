@@ -1,10 +1,9 @@
 <?php
-namespace MBCore\MCore\Libraries;
+namespace Jenson\Core\Libraries;
 
 use Illuminate\Http\Request;
 use GuzzleHttp\Client;
 use Carbon\Carbon;
-use MBCore\MPaySDK\Controllers\OrderController;
 
 
 class Order
@@ -81,22 +80,6 @@ class Order
 
 
         return $data;
-    }
-    /**
-     * @param $fn
-     * @param $params
-     * @return \Illuminate\Http\JsonResponse
-     * @throws \Exception
-     *
-     * 订单SDK
-     */
-    public static function SDK($fn,$params){
-
-        $sdk = new OrderController();
-
-        $result = $sdk->$fn($params);
-
-        return $result;
     }
 
     /**

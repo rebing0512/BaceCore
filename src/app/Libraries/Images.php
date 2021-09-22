@@ -1,9 +1,9 @@
 <?php
 
-namespace MBCore\MCore\Libraries;
+namespace Jenson\Core\Libraries;
 
 use Illuminate\Support\Facades\Cache;
-use MBCore\MCore\Models\Storage;
+use Jenson\Core\Models\Storage;
 
 class Images
 {

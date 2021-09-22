@@ -5,7 +5,7 @@
  * Date: 2019/03/04 0007
  * Time: 13:40
  */
-namespace MBCore\MCore\Libraries;
+namespace Jenson\Core\Libraries;
 
 use GuzzleHttp\Client;
 

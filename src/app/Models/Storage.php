@@ -1,6 +1,6 @@
 <?php
 
-namespace MBCore\MCore\Models;
+namespace Jenson\Core\Models;
 
 use Illuminate\Database\Eloquent\Model;
 

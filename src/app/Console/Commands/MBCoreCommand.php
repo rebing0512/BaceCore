@@ -1,5 +1,5 @@
 <?php
-namespace MBCore\MCore\Console\Commands;
+namespace Jenson\Core\Console\Commands;
 
 use Illuminate\Console\Command as BaseCommand;
 use Illuminate\Support\Facades\DB;

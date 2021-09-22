@@ -1,5 +1,5 @@
 # Helper
-[use MBCore\MCore\Libraries\Helper]
+[use Jenson\Core\Libraries\Helper]
 1. getPlatform(Request $request) 获取当前的平台类型，依据：server('HTTP_USER_AGENT'))
 2. safeEncode($data) 安全base64_encode将可能会被浏览器破坏的符号替换成其他符号
 3. safeDecode($data) 安全解码 对应 safeEncode

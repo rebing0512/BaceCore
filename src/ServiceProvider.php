@@ -1,10 +1,8 @@
 <?php
-namespace MBCore\MCore;
+namespace Jenson\Core;
 
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 use Blade;
-
-//use MBCore\MCore\Console\Commands\MBCoreCommand;
 
 //
 class ServiceProvider extends BaseServiceProvider{

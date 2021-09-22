@@ -1,5 +1,5 @@
 <?php
-namespace MBCore\MCore\Libraries;
+namespace Jenson\Core\Libraries;
 
 use Illuminate\Http\Request;
 use GuzzleHttp\Client;

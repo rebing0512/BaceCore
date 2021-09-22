@@ -1,6 +1,6 @@
 {
-    "name": "jenson/core",
-    "description": "Jenson Core Packages",
+    "name": "jenson0512/basecore",
+    "description": "Jenson Base Core Packages",
     "type": "project",
     "license": "MIT",
     "authors": [
@@ -14,13 +14,13 @@
     },
     "autoload": {
         "psr-4": {
-            "MBCore\\MCore\\": "src/"
+            "Jenson\\Core\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "MBCore\\MCore\\ServiceProvider"
+                "Jenson\\Core\\ServiceProvider"
             ]
         }
     }

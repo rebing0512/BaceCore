@@ -1,6 +1,6 @@
 <?php
 
-namespace MBCore\MCore\Libraries;
+namespace Jenson\Core\Libraries;
 
 class BankCard
 {
