@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Schema;
 use League\Flysystem\Exception;
 use Illuminate\Support\Facades\Config;  //临时config解决方案
 
-class MBCoreCommand extends BaseCommand
+class CoreDBCommand extends BaseCommand
 {
 
 
@@ -18,14 +18,14 @@ class MBCoreCommand extends BaseCommand
      * @var string
      */
     //定义期望输入
-    protected $signature = 'mbcore:updatedb';
+    protected $signature = 'Jesnon:updatedb';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'MBCore Update DB Command';
+    protected $description = 'Jesnon Update DB Command';
 
     /**
      * Create a new command instance.

@@ -48,7 +48,7 @@ class ServiceProvider extends BaseServiceProvider{
         # 【6】注册 Artisan 命令
         if ($this->app->runningInConsole()) {
             $this->commands([
-//               MBCoreCommand::class,
+            //
             ]);
         }
 	}
